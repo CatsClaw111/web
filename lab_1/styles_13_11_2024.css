@@ -1,0 +1,18 @@
+.prikol{
+    width: 200px;
+    height: 200px;
+}
+
+.for_p{
+    width: 300px; /* ширина блока */
+    padding: 20px; /* внутренние отступы */
+    margin: 0 auto; /* выравнивание по горизонтали */
+    position: absolute; /* абсолютное позиционирование */
+    top: 50%; /* от центра страницы */
+    left: 50%; /* от центра страницы */
+    transform: translate(-50%, -50%); /* сдвиг для точного выравнивания */
+    background-color: #f3f3f3; /* фоновый цвет */
+    border: 1px solid #ccc; /* рамка */
+    text-align: center; /* выравнивание текста по центру */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* легкая тень */
+}
