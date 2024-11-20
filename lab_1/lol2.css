@@ -12,7 +12,7 @@ header {
 
 
 body {
-    font-family: Arial ;
+    font-family: Arial;
     line-height: 1.5;
     margin: 0;
     padding: 0;
@@ -79,4 +79,16 @@ nav ul li a:hover {
 
 .download{
     background-color: #f0f0f0;
+}
+
+.ugly{
+
+    background-image: linear-gradient(to right, red, blue);
+    background-clip: border-box;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin: auto;
+    display: inline-block;
+    text-align: center;
+    color: white;
 }
