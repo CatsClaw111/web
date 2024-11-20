@@ -52,8 +52,6 @@ footer {
     margin-top: 20px;
 }
 
-
-/* Стиль для меню навигации */
 nav ul {
     list-style: none;
     padding: 0;
@@ -62,7 +60,6 @@ nav ul {
     justify-content: center;
 }
 
-/* Стиль для элементов списка только в навигации */
 nav ul li {
     margin: 0 15px;
 }
@@ -76,7 +73,10 @@ nav ul li a {
     transition: background-color 0.3s;
 }
 
-/* Эффект при наведении */
 nav ul li a:hover {
     background-color: #7F180D;
+}
+
+.download{
+    background-color: #f0f0f0;
 }
