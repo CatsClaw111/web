@@ -1,37 +1,37 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+html {
+    scroll-behavior: smooth;
 }
 
+
 header {
-    background-color: #4CAF50;
+    background-color: #D53032;
     color: white;
-    padding: 10px 20px;
+    padding: 20px;
     text-align: center;
 }
 
-h1, h2 {
-    margin: 10px 0;
+
+body {
+    font-family: Arial ;
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    background-color: white;
+    color: black;
 }
 
 main {
     padding: 20px;
 }
 
-.image-example {
+.image-style {
     display: block;
-    max-width: 100%;
-    height: auto;
     margin: 10px auto;
-    border: 2px solid #ddd;
+    border: 3px solid #ddd;
 }
 
 a {
-    color: #4CAF50;
+    color: #D53032;
     text-decoration: none;
 }
 
@@ -50,4 +50,33 @@ footer {
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
+}
+
+
+/* Стиль для меню навигации */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+/* Стиль для элементов списка только в навигации */
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+/* Эффект при наведении */
+nav ul li a:hover {
+    background-color: #7F180D;
 }
