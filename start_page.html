@@ -3,13 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Первые</title>
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="lol2.css">
+    <link rel="stylesheet" href="lab_1\start_page_styles\reset.css">
+    <link rel="stylesheet" href="lab_1\start_page_styles\start_page_styles.css">
+    <link rel="stylesheet" href="lab_1/start_page_styles/circle.css">
+    <!-- <link rel="stylesheet" href="start_page_styles.css"> -->
 </head>
 <body>
     <div>
         <header>
-            <h1>Мобильное приложение "Первые"</h1>
+            <div>
+                <h1>Мобильное приложение "Первые"</h1>
+            </div>
             <nav>
                 <ul>
                     <li><a href="#download">Скачать</a></li>
@@ -18,28 +22,40 @@
                 </ul>
             </nav>
         </header>
-    </div>    
+    </div>  
     
     <div>
         <main>
+            <div class="stick">Прикол</div>
 
             <section id="info">
+                <div class="circle_container">
+                    <div class="circle">
+                        <div class="rotating-text">
+                            <span>ВСТУПИТЬ В ДВИЖЕНИЕ</span>
+                            <span>ВСТУПИТЬ В ДВИЖЕНИЕ</span>
+                            <span>ВСТУПИТЬ В ДВИЖЕНИЕ</span>
+                        </div>
+                    </div>
+                </div>
                 <div class="for-what-site-title-container">
                     <h2 class="for-what-site-title" style="text-align: center;">О чём этот сайт?</h2>
                 </div>
-                <p>Данный сайт предназначен для презентации нового мобильного приложения РДДМ "Движение Первых".</p>
-                <p>В его функционал входят:
-                    <ul>
-                        <li>Организация локальных мероприятий</li>
-                        <li>Менторская программа с чатами и лекциями</li>
-                        <li>Личный кабинет с упрощённой возможностью отслеживания личных достижений</li>
-                    </ul>
-                </p>
+                <div class="prikol">
+                    <p>Данный сайт предназначен для презентации нового мобильного приложения РДДМ "Движение Первых".</p>
+                    <p>В его функционал входят:
+                        <ul class="">
+                            <li>Организация локальных мероприятий</li>
+                            <li>Менторская программа с чатами и лекциями</li>
+                            <li>Личный кабинет с упрощённой возможностью отслеживания личных достижений</li>
+                        </ul>
+                    </p>
+                </div>
                 <p>Но на данный момент приложенсие ещё находится в разработке!</p>
             </section>
             
             <section style="margin: 30px;">
-                <img src="logo.png" alt="Пример изображения" class="image-style">
+                <img src="lab_1/images/logo.png" alt="Изображение Первых" class="image-style">
             </section>
 
             <section id="partners" class="plavno">
@@ -63,6 +79,7 @@
     <div>
         <footer>
             <p>Присоединяйся и ты!</p>
+            <p>&copy; Права защищены</p>
         </footer>
     </div>
 </body>

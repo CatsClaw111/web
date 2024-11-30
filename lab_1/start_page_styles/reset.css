@@ -9,3 +9,12 @@ body, h1, h2, h3, p, ul, ol, li, table, th, td {
   }
   /* Убираются все отступы, паддинги и другие стили браузеров */
   
+  .prikol {
+    display: block;
+    color: red
+  }
+
+.a{display: grid; 
+  grid-template-columns: 1fr 2fr; 
+  gap: 10px; 
+  background: lightgreen;}
