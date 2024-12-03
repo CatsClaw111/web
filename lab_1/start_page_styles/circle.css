@@ -1,30 +1,15 @@
-/* Контейнер для круга */
+  /* Контейнер для круга */
 .circle_container{
     position: relative;
-    height: 500px;
+    height: 2000px;
     width: 100%;
     margin-bottom: -2000px;
 }
-
-
-/* .circle {
-    position: sticky;
-    top: 50px;
-    right: 0;
-    width: 200px;
-    height: 200px;
-    margin: auto;
-    background-color: #ff4d4d;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  } */
-  
+  /* Сам круг */
 .circle {
     position: fixed;
     top: 50px; /* Расстояние от верхнего края */
-    right: 0; /* Расстояние от правого края */
+    right: 50px; /* Расстояние от правого края */
     width: 200px;
     height: 200px;
     background-color: #ff4d4d;
@@ -33,9 +18,7 @@
     justify-content: center;
     align-items: center;
 }
-
-
-  /* Вращающийся текст вокруг круга */
+  /* Вращающийся текст */
 .rotating-text {
     position: sticky;
     top: 50px;
@@ -62,27 +45,15 @@
   
   /* Позиционирование каждого слова по окружности */
 .rotating-text span:nth-child(1) {
-    transform: rotate(0deg) translateX(90px) rotate(0deg);
+    transform: rotate(180deg) translateX(0px) rotate(-180deg);
 }
 .rotating-text span:nth-child(2) {
-    transform: rotate(45deg) translateX(90px) rotate(-45deg);
+    transform: rotate(225deg) translateX(-40px) translateY(-20px) rotate(-225deg);
 }
 .rotating-text span:nth-child(3) {
-    transform: rotate(90deg) translateX(90px) rotate(-90deg);
-}
-.rotating-text span:nth-child(4) {
-    transform: rotate(135deg) translateX(90px) rotate(-135deg);
-}
-.rotating-text span:nth-child(5) {
-    transform: rotate(180deg) translateX(90px) rotate(-180deg);
-}
-.rotating-text span:nth-child(6) {
-    transform: rotate(225deg) translateX(90px) rotate(-225deg);
-}
-.rotating-text span:nth-child(7) {
     transform: rotate(270deg) translateX(90px) rotate(-270deg);
 }
-.rotating-text span:nth-child(8) {
+.rotating-text span:nth-child(4) {
     transform: rotate(315deg) translateX(90px) rotate(-315deg);
 }
   
