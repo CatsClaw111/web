@@ -17,25 +17,33 @@
         <header>
             <!-- Навигационная панель по сайту -->
             <div>
-                <nav class="navbar">
-                    <div class="logo">Энергия Жизни</div>
-                    <ul class="nav-menu">
-                        <li><a href="#app_info">Информация</a></li>
-                        <li><a href="#app_description">Описание</a></li>
-                        <li><a href="#app_authors">Авторы</a></li>
-                        <li><a href="#app_gallery">Галерея</a></li>
-                        <li><a href="#app_partners">Партнёры</a></li>
-                    </ul>
-                </nav>
+                <div class="top">
+                    <div class="logo">Энергия жизни</div>
+                    <nav class="navbar">
+                        <ul class="nav-menu">
+                            <li><a href="#app_info">Информация</a></li>
+                            <li><a href="#app_description">Описание</a></li>
+                            <li><a href="#app_authors">Авторы</a></li>
+                            <li><a href="#app_gallery">Галерея</a></li>
+                            <li><a href="#app_partners">Партнёры</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
     </div>
     <div>
         <div class="circle_container">
             <div class="circle">
-                <div class="rotating-text">
-                    <span><a href="https://youtube.com" target="_blank">Присоединяйся</a></span>
-                </div>
+                <div class="center-icon">✔</div>
+                <svg width="200" height="200" viewBox="0 0 200 200">
+                    <path id="circlePath" fill="none" stroke="none" d="M 100, 100 m -80, 0 a 80, 80 0 1, 0 160, 0 a 80, 80 0 1, 0 -160, 0"></path>
+                    <text fill="white" font-size="14" font-weight="bold">
+                        <textPath href="#circlePath" starOffset="0%">
+                            ВСТУПИТЬ В ПРОЕКТ  ·  ВСТУПИТЬ В ПРОЕКТ  ·  ВСТУПИТЬ В ПРОЕКТ  · 
+                        </textPath>
+                    </text>
+                </svg>
             </div>
         </div>
         <!-- Контейнер для основной странички(для чего - ещё в процессе разработки) -->
@@ -48,21 +56,7 @@
             </section>
             <!-- Секция более подробной презентации -->
             <section id="app_description">
-                <!-- <div>
-                    <p>Приложение "Движение Первых" предоставляет уникальную возможность для пользователей легко и быстро организовывать локальные мероприятия, будь то встречи, тренировки, мастер-классы или социальные события. Основная цель приложения — объединить людей с общими интересами и дать каждому возможность внести свой вклад в развитие сообщества.</p>
-                </div>
-                <div>
-                    <ul>
-                        <li>Создание локальных мероприятий</li>
-                        <li>Гибкая настройка участников</li>
-                        <li>Геолокация и карты</li>
-                        <li>Командные проекты и совместные мероприятия</li>
-                        <li>Оповещения и уведомления</li>
-                        <li>Отзывы и рейтинги</li>
-                        <li>Интеграция с социальными сетями</li>
-                        <li>Поддержка многозадачности</li>
-                    </ul>
-                </div> -->
+                
             </section>
             <!-- Секция с авторами -->
             <section id="app_authors">

@@ -1,65 +1,48 @@
-  /* Контейнер для круга */
-.circle_container{
-    position: relative;
-    height: 2000px;
-    width: 100%;
-    margin-bottom: -2000px;
+/* Контейнер для всего круга */
+.circle-container {
+  position: relative; /* Контекст позиционирования для детей */
+  height: 100vh; /* Высота равна высоте окна браузера */
 }
-  /* Сам круг */
+
+/* Круг */
 .circle {
-    position: fixed;
-    top: 100px; /* Расстояние от верхнего края */
-    right: 50px; /* Расстояние от правого края */
-    width: 200px;
-    height: 200px;
-    background-color: #ff4d4d;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  position: fixed; /* Зафиксированное положение относительно окна браузера */
+  top: 100px; /* Расстояние от верхнего края */
+  right: 50px; /* Расстояние от правого края */
+  width: 200px; /* Размер круга */
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ff4d4d;
+  box-shadow: 0 0 15px rgba(255, 77, 77, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid white 1px;
 }
-  /* Вращающийся текст */
-.rotating-text {
-    position: sticky;
-    top: 50px;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: rotate 8s linear infinite;
+
+/* Галочка по центру */
+.center-icon {
+  position: absolute;
+  font-size: 36px;
+  color: white;
+  font-weight: bold;
+  z-index: 10;
 }
-  /* Текст внутри круга */
-.rotating-text span a{
-    position: absolute;
-    transform-origin: center center;
-    font-size: 14px;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    display: block;
-    width: 100%;
-    text-align: center;
+
+/* SVG с вращающимся текстом */
+svg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 8s linear infinite;
 }
-  /* Позиционирование каждого слова по окружности */
-.rotating-text span:nth-child(1) {
-    transform: rotate(180deg) rotate(-180deg);
-}
-.rotating-text span:nth-child(2) {
-    transform: rotate(225deg) translateX(-40px) translateY(-20px) rotate(-225deg);
-}
-.rotating-text span:nth-child(3) {
-    transform: rotate(270deg) translateX(90px) rotate(-270deg);
-}
-.rotating-text span:nth-child(4) {
-    transform: rotate(315deg) translateX(90px) rotate(-315deg);
-} 
-  /* Анимация вращения */
-  @keyframes rotate {
-    from {
-      transform: rotate(0deg);
-    }
-    to {
-      transform: rotate(360deg);
-    }    
+
+/* Анимация текста */
+@keyframes rotateText {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
 }

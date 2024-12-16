@@ -12,7 +12,7 @@ body {
 
     /* min-height: 100vh; Высота на весь экран */
     box-shadow: inset 0 0 100px 50px rgb(29,45,80, 0.4);
-    background: #FFFFFF; /* Цвет фона страницы */
+    background: #ff4d4d; /* Цвет фона страницы */
 }
 
 body:before {
