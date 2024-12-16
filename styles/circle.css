@@ -23,10 +23,14 @@
 /* Галочка по центру */
 .center-icon {
   position: absolute;
+  z-index: 10;
+}
+
+.center-icon > a {
   font-size: 36px;
   color: white;
   font-weight: bold;
-  z-index: 10;
+  text-decoration: none;
 }
 
 /* SVG с вращающимся текстом */
