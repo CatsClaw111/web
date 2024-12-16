@@ -13,35 +13,42 @@
 </head>
 <body>
     <!-- Контейнер для Header -->
-    <div>
+    <div class="header_wrapper">
         <header>
             <!-- Навигационная панель по сайту -->
-            <div>
-                <div class="top">
-                    <div class="logo">Энергия жизни</div>
-                    <nav class="navbar">
-                        <ul class="nav-menu">
+                <div class="navbar">
+                    <div class="nav_left">
+                        <a class="nav_link" href="#info">О нас</a>
+                        <a class="nav_link" href="#description">Описание</a>
+                        <a class="nav_link" href="#gallery">Галерея</a>
+                    </div>
+                    <div class="logo"><img class="gradient-hover" src="images/logo.png" alt="Логотип"></div>
+                    <div class="nav_right">
+                        <a class="nav_link" href="#authors">Авторы</a>
+                        <a class="nav_link" href="#partners">Партнёры</a>
+                        <a class="nav_link" href="#feedback">Связь</a>
+                    </div>    
+                    <!-- <ul class="nav-menu">
                             <li><a href="#app_info">Информация</a></li>
                             <li><a href="#app_description">Описание</a></li>
                             <li><a href="#app_authors">Авторы</a></li>
                             <li><a href="#app_gallery">Галерея</a></li>
                             <li><a href="#app_partners">Партнёры</a></li>
-                        </ul>
+                        </ul> -->
                     </nav>
                 </div>
-            </div>
         </header>
     </div>
     <div>
         <div class="circle_container">
             <div class="circle">
-                <div class="center-icon"><a href="">✔</a></div>
+                <div class="center-icon"><a href="https://youtube.com" target="_blank">✔</a></div>
                 <svg width="200" height="200" viewBox="0 0 200 200">
                     <!-- d = M {перемещение кисти в указанную точку} m {смещение кисти} a {радиус по гор. и вер.; угол наклона оси дуги; флаг большой дуги; направление по часовой стрелке дуги; смещение по x и y кисти} -->
                     <path id="circlePath" fill="none" stroke="none" d="M 100, 100 m -80, 0 a 80, 80 0 1, 0 160, 0 a 80, 80 0 1, 0 -160, 0"></path>
                     <text fill="white" font-size="14" font-weight="bold">
                         <textPath href="#circlePath" starOffset="0%">
-                            ВСТУПИТЬ В ПРОЕКТ  ·  ВСТУПИТЬ В ПРОЕКТ  ·  ВСТУПИТЬ В ПРОЕКТ  · 
+                            ВСТУПИТЬ В ПРОЕКТ  •  ВСТУПИТЬ В ПРОЕКТ  •   
                         </textPath>
                     </text>
                 </svg>
@@ -50,29 +57,62 @@
         <!-- Контейнер для основной странички(для чего - ещё в процессе разработки) -->
         <main>
             <!-- Секция краткой информации -->
-            <section id="app_info">
+            <section id="info">
                 <div>
-                    <p></p>
+
                 </div>
             </section>
             <!-- Секция более подробной презентации -->
-            <section id="app_description">
+            <section id="description">
                 
             </section>
-            <!-- Секция с авторами -->
-            <section id="app_authors">
-                <div>
-
+            <!-- Секция с галереей  -->
+            <section id="gallery" class="gallery_section">
+                <h2>Галерея</h2>
+                <div class="gallery_container">
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
+                    <div class="gallery_item">
+                        <img src="images/sport.jpg" alt="Спорт">
+                    </div>
                 </div>
             </section>
-            <!-- Секция с галереей  -->
-            <section id="app_gallery">
+            <!-- Секция с авторами -->
+            <section id="authors">
                 <div>
-
+                    
                 </div>
             </section>
             <!-- Секция с ключевыми партнёрами -->
-            <section id="app_partners">
+            <section id="partners">
+                <div>
+                    
+                </div>
+            </section>
+            <!-- Секция с формой обратной связи -->
+            <section id="feedback">
                 <div>
 
                 </div>
@@ -92,6 +132,6 @@
     </div>
 
 
-    <script src="script.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 </html>

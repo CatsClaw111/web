@@ -1,15 +1,15 @@
 /* Контейнер для всего круга */
 .circle-container {
-  position: relative; /* Контекст позиционирования для детей */
-  height: 100vh; /* Высота равна высоте окна браузера */
+  position: relative;
+  height: 100vh;
 }
 
 /* Круг */
 .circle {
-  position: fixed; /* Зафиксированное положение относительно окна браузера */
-  top: 100px; /* Расстояние от верхнего края */
-  right: 50px; /* Расстояние от правого края */
-  width: 200px; /* Размер круга */
+  position: fixed;
+  top: 160px;
+  right: 50px;
+  width: 200px;
   height: 200px;
   border-radius: 50%;
   background-color: #ff4d4d;
@@ -26,11 +26,16 @@
   z-index: 10;
 }
 
+/* Сама галочка */
 .center-icon > a {
   font-size: 36px;
   color: white;
   font-weight: bold;
   text-decoration: none;
+}
+
+.center-icon:hover {
+  scale: 3;
 }
 
 /* SVG с вращающимся текстом */
@@ -39,6 +44,7 @@ svg {
   width: 100%;
   height: 100%;
   animation: rotateText 8s linear infinite;
+  letter-spacing: 4.5px;
 }
 
 /* Анимация текста */
@@ -47,6 +53,6 @@ svg {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(-360deg);
+    transform: rotate(360deg);
   }
 }
