@@ -1,14 +1,10 @@
-// Функция для загрузки текста из файла text.txt
-function loadText() {
-    fetch('text.txt')
-        .then(response => response.text())
-        .then(text => {
-            // Вставляем текст в секцию с id="app_description"
-            const appDescription = document.getElementById('app_description');
-            appDescription.innerHTML = `<div><p>${text}</p></div>`;
-        })
-        .catch(error => console.error('Error loading text:', error));
-}
+const contentDiv = document.getElementById('content');
 
-// Вызов функции при загрузке страницы
-window.onload = loadText;
+fetch('other/text.txt')
+    .then(response => response.text())
+    .then(data => {
+    contentDiv.textContent = data;
+    })
+    .catch(error => {
+    console.error('Ошибка загрузки текста:', error);
+    });

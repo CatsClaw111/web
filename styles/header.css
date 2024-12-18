@@ -42,6 +42,7 @@ header {
     width: 100px;
     border: #fff 1px solid;
     border-radius: 100px;
+    background-color: white;
 }
 
 .nav_link {
@@ -51,9 +52,6 @@ header {
     text-decoration: none;
     font-size: 1.5rem;
     font-weight: bold;
-}
-.nav-menu li {
-    display: inline-block;
 }
 
 .nav_left a:hover {
