@@ -43,7 +43,7 @@ section {
     position: relative;
     overflow: hidden;
     animation: fadeInUp 1s ease forwards;
-    /* background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 10px, #e0e0e0 10px, #e0e0e0 20px); */
+    background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 10px, #e0e0e0 10px, #e0e0e0 20px);
 }
 
 section::after {
@@ -86,6 +86,7 @@ section::after {
 }
 .info_item {
   flex: 1 1 calc(33.333% - 20px);
+  height: auto;
   background-color: lightgrey;
   border: solid 1px rgb(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -100,6 +101,12 @@ section::after {
   font-size: 1.5rem;
   font-weight: bold;
 }
+
+.info_item > ul > li {
+  list-style-position: inside;
+}
+
+
 
 /* ! Секция Описание */
 
