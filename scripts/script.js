@@ -1,10 +1,11 @@
 const contentDiv = document.getElementById('content');
 
-fetch('other/text.txt')
+fetch('other/test.txt')
     .then(response => response.text())
     .then(data => {
-    contentDiv.textContent = data;
+        // Заменяем символы новой строки на <br>
+        contentDiv.innerHTML = data.replace(/\n/g, '<br>');
     })
     .catch(error => {
-    console.error('Ошибка загрузки текста:', error);
+        console.error('Ошибка загрузки текста:', error);
     });

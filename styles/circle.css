@@ -32,10 +32,12 @@
   color: white;
   font-weight: bold;
   text-decoration: none;
+  display: inline-block;
+  transition: transform 1s ease;
 }
 
-.center-icon:hover {
-  scale: 3;
+.center-icon > a:hover {
+  transform: scale(3);
 }
 
 /* SVG с вращающимся текстом */
@@ -43,7 +45,7 @@ svg {
   position: absolute;
   width: 100%;
   height: 100%;
-  animation: rotateText 8s linear infinite;
+  animation: rotateText 18s linear infinite;
   letter-spacing: 4.5px;
 }
 

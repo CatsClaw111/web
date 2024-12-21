@@ -2,6 +2,8 @@ footer{
     background-color: #EF4444;
     padding: 10px 20px;
     border: 1px solid white;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
 }
 
 .footer_info {
