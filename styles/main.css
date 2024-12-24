@@ -16,47 +16,23 @@ body {
   background: #ff4d4d; /* Цвет фона страницы */
 }
 
-body:before {
-  right: 100%;
-  box-shadow: inset -55px 0 55px -55px rgba(0,2,3,.15);
-}
-body:after {
-  left: 100%;
-  box-shadow: inset 55px 0 55px -55px rgba(0,2,3,.15);
-}
-
-
 section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    border: 5px solid rgb(30,58,138, 0.5);
-    border-radius: 20px;
-    text-align: center;
-    padding: 20px;
-    margin-left: 300px;
-    margin-right: 300px;
-    margin-bottom: 50px;
-    background-color: #F9F9F9;
-    position: relative;
-    overflow: hidden;
-    animation: fadeInUp 1s ease forwards;
-    background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 10px, #e0e0e0 10px, #e0e0e0 20px);
-}
-
-section::after {
-  content: "";
-  background: url('lines.png');
-  background-size: cover;
-  background-position: center;
-  opacity: 0.5;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  border: 5px solid rgb(30,58,138, 0.5);
+  border-radius: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 50px;
+  background-color: #F9F9F9;
+  position: relative;
+  overflow: hidden;
+  animation: fadeInUp 1s ease forwards;
+  background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 10px, #e0e0e0 10px, #e0e0e0 20px);
 }
 
 /* ! Секция Краткой информации */
@@ -128,6 +104,22 @@ section::after {
   padding: 10px 20px;
 }
 
+ul li:nth-child(odd)::before {
+  content: '➡ ';
+  color: #007bff;
+}
+ul li:nth-child(even)::before {
+  content: '✓ ';
+  color: #28a745;
+}
+ul li:nth-child(odd) {
+  background-color: #f8f9fa;
+}
+ul li:nth-child(even) {
+  background-color: #e9ecef;
+}
+
+
 /* ! Секция Галерея */
 
 .gallery-section {
@@ -191,9 +183,62 @@ fieldset div {
   margin-bottom: 20px;
 }
 
+ input, textarea, select {
+  font-size: 16;
+  border: 2px solid black;
+  border-radius: 10px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  outline: none;
+
+}
+
 textarea {
   resize: none;
   width: 500px;
   overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
+input:focus, textarea:focus, select:focus, option:focus  {
+  border-color: #ff4d4d;
+  box-shadow:  5px 10px 10px rgba(239,68,68, 0.5);
+} 
+
+input[type="radio"]:focus, input[type="checkbox"]:focus {
+  box-shadow: none;
+}
+
+input::placeholder, textarea::placeholder {
+  color: #6c757d;
+  font-family: "Balsamiq Sans", serif; 
+  font-style: normal;
+  font-size: 14px;
+}
+
+input[type="radio"]:checked + label, 
+input[type="checkbox"]:checked + label {
+  color: #007bff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+input[type="checkbox"]:checked + label {
+  text-decoration: line-through;
+  color: #6c757d;
+}
+
+
+input:required {
+  border: 2px solid #ff4d4d;
+  background: url('data:image/svg+xml;base64,...') no-repeat right;
+  padding-right: 25px;
+}
+
+
+
+/* ! Дополнительные элементы */
+
+::selection {
+  background-color: rgb(249,115,22);
+  color: rgb(59,130,246);
+}

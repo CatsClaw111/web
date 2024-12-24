@@ -9,12 +9,15 @@
 
 
     <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
 
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles/main.css">
-    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/circle.css">
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <!-- <link rel="stylesheet" href="styles/radio.css"> -->
     
 </head>
 <body>
@@ -37,21 +40,20 @@
                 </div>
         </header>
     </div>
-    <div>
-        <div class="circle_container">
-            <div class="circle">
-                <div class="center-icon"><a href="https://youtube.com" target="_blank">✔</a></div>
-                <svg width="200" height="200" viewBox="0 0 200 200">
-                    <!-- d = M {перемещение кисти в указанную точку} m {смещение кисти} a {радиус по гор. и вер.; угол наклона оси дуги; флаг большой дуги; направление по часовой стрелке дуги; смещение по x и y кисти} -->
-                    <path id="circlePath" fill="none" stroke="none" d="M 100, 100 m -80, 0 a 80, 80 0 1, 0 160, 0 a 80, 80 0 1, 0 -160, 0"></path>
-                    <text fill="white" font-size="14" font-weight="bold">
-                        <textPath href="#circlePath" starOffset="0%">
-                            ВСТУПИТЬ В ПРОЕКТ  •  ВСТУПИТЬ В ПРОЕКТ  •   
-                        </textPath>
-                    </text>
-                </svg>
-            </div>
+    <div class="circle_container">
+        <div class="circle">
+            <div class="center-icon"><a href="https://youtube.com" target="_blank">✔</a></div>
+            <svg width="200" height="200" viewBox="0 0 200 200">
+                <!-- d = M {перемещение кисти в указанную точку} m {смещение кисти} a {радиус по гор. и вер.; угол наклона оси дуги; флаг большой дуги; направление по часовой стрелке дуги; смещение по x и y кисти} -->
+                <path id="circlePath" fill="none" stroke="none" d="M 100, 100 m -80, 0 a 80, 80 0 1, 0 160, 0 a 80, 80 0 1, 0 -160, 0"></path>
+                <text fill="white" font-size="14" font-weight="bold">
+                    <textPath href="#circlePath" starOffset="0%">
+                        ВСТУПИТЬ В ПРОЕКТ  •  ВСТУПИТЬ В ПРОЕКТ  •   
+                    </textPath>
+                </text>
+            </svg>
         </div>
+    </div>
         <!-- Контейнер для основной странички(для чего - ещё в процессе разработки) -->
         <main>
             <!-- Секция краткой информации -->
@@ -196,7 +198,7 @@
                                 <label for="birthdate">Дата рождения:</label>
                                 <input type="date" id="birthdate" name="birthdate" required>    
                             </div>            
-                            <div>
+                            <div >
                                 <label for="gender">Пол:</label>
                                 
                                 <input type="radio" id="male" value="male" name="sex" required/>
@@ -269,6 +271,6 @@
     </div>
 
 
-    <script src="scripts/script.js"></script>
+    <script src="scripts/text.js"></script>
 </body>
 </html>

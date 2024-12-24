@@ -1,0 +1,45 @@
+/* Скрываем стандартные радиокнопки */
+.custom-radio > input[type="radio"] {
+    display: none;
+}
+
+/* Стили для кастомных кнопок */
+.custom-radio > label {
+    position: relative;
+    padding-left: 30px; /* Отступ для кастомной радиокнопки */
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 20px;
+    color: #333;
+}
+
+/* Кастомная радиокнопка */
+.custom-radio > label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #007bff;
+    border-radius: 50%;
+    background: white;
+    transition: all 0.3s ease;
+}
+
+/* Стили для активной радиокнопки */
+.custom-radio > input[type="radio"]:checked + label::before {
+    background: #007bff;
+    box-shadow: inset 0 0 0 4px white;
+}
+
+/* Стили для состояния hover */
+.custom-radio > label:hover::before {
+    border-color: #0056b3;
+}
+
+.custom-radio > input[type="radio"]:checked + label::before {
+    transform: scale(1.2);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
