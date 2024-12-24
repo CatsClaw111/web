@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/circle.css">
     <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/footer.css">
+    <link rel="stylesheet" href="styles/animations.css">
     <!-- <link rel="stylesheet" href="styles/radio.css"> -->
     
 </head>
@@ -31,11 +32,13 @@
                         <a class="nav_link" href="#description">Описание</a>
                         <a class="nav_link" href="#gallery">Галерея</a>
                     </div>
-                    <div class="logo"><img class="gradient-hover" src="images/logo.png" alt="Логотип"></div>
+                    <div class="logo">
+                        <img class="gradient-hover" src="images/logo.png" alt="Логотип">
+                    </div>
                     <div class="nav_right">
                         <a class="nav_link" href="#authors">Авторы</a>
                         <a class="nav_link" href="#partners">Партнёры</a>
-                        <a class="nav_link" href="#feedback">Связь</a> 
+                        <a class="nav_link" href="hlam.html">Хлам</a> 
                     </div>    
                 </div>
         </header>
@@ -173,10 +176,41 @@
             </section>
             <!-- Секция с авторами -->
             <section id="authors">
-                <div>
-                    
+                <div class="box">
+                    <div class="gradient linear graf"></div>
+                    <div class="gradient radial graf"></div>
+                    <div class="gradient conic graf"></div>
+                
+                    <div class="transform2d rotate graf">Поворот</div>
+                    <div class="transform2d scale graf">Масштаб</div>
+                
+                    <div class="transform3d rotate3d graf">3D-поворот</div>
+                    <div class="transform3d translate3d graf">3D-смещение</div>
+                
+                    <div class="transition color-change graf">Наведи на меня</div>
+                    <div class="transition size-change graf">Кликни на меня</div>
+
+
+                    <!-- Анимация появления -->
+                    <div class="fade-in graf">Плавное появление</div>
+                
+                    <!-- Светящиеся рамки -->
+                    <div class="glowing-border graf">Светящаяся рамка</div>
+                
+                    <!-- Текстовая анимация -->
+                    <div class="text-animation graf">Анимация текста с переливом</div>
+                
+                    <!-- Волны -->
+                    <div class="wave graf">Волны</div>
+                
+                    <!-- "Пружина" при наведении -->
+                    <div class="spring-hover graf">Наведи на меня</div>
+                
+                    <!-- Имитация "пульсации" -->
+                    <div class="pulse graf">Пульсация</div>
+                
                 </div>
-            </section>
+                    </section>
             <!-- Секция с ключевыми партнёрами -->
             <section id="partners">
                 <div>
@@ -252,7 +286,7 @@
                             <legend>Ваши предложения по улучшению проекта:</legend>
                             <textarea name="message" id="message" spellcheck="True" cols="100" rows="20" placeholder="Введите предложения" required></textarea>
                         </fieldset>
-            
+
                         <button type="submit">
                             <span>Зарегистрироваться</span>
                         </button>

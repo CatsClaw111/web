@@ -1,0 +1,217 @@
+.box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin: 20px;
+    background-color: white;
+}
+
+.graf {
+    margin: 50px;
+}
+
+/* --- Градиенты --- */
+/* Линейный градиент */
+.gradient.linear {
+    width: 200px;
+    height: 100px;
+    background: linear-gradient(45deg, #007bff, #28a745);
+    margin-bottom: 20px;
+}
+
+/* Радиальный градиент */
+.gradient.radial {
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(circle, #ff7f50, #ff4500);
+    margin-bottom: 20px;
+}
+
+/* Конический градиент */
+.gradient.conic {
+    width: 200px;
+    height: 100px;
+    background: conic-gradient(#007bff, #28a745, #ff4500, #007bff);
+    margin-bottom: 20px;
+}
+
+/* --- 2D-преобразования --- */
+.transform2d {
+    width: 150px;
+    height: 50px;
+    background: #007bff;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 20px;
+}
+
+/* Поворот */
+.transform2d.rotate {
+    transform: rotate(15deg);
+}
+
+/* Масштаб */
+.transform2d.scale {
+    transform: scale(1.5);
+}
+
+/* --- 3D-преобразования --- */
+.transform3d {
+    width: 150px;
+    height: 50px;
+    background: #28a745;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 20px;
+    transform-style: preserve-3d;
+}
+
+/* Поворот 3D */
+.transform3d.rotate3d {
+    transform: rotateX(30deg) rotateY(30deg);
+}
+
+/* Смещение 3D */
+.transform3d.translate3d {
+    transform: translate3d(2px, 20px, 50px);
+}
+
+/* --- Переходы (transition) --- */
+.transition {
+    width: 150px;
+    height: 50px;
+    background: #ff4500;
+    color: white;
+    text-align: center;
+    line-height: 50px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+/* Изменение цвета */
+.transition.color-change:hover {
+    transition: background-color 0.5s ease;
+    background-color: #007bff;
+}
+
+/* Изменение размера */
+.transition.size-change:active {
+    transition: transform 0.3s ease;
+    transform: scale(1.2);
+}
+
+/* 1. Анимация появления */
+.fade-in {
+    background: #4caf50;
+    opacity: 0;
+    animation: fadeIn 2s forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* 2. Светящиеся рамки */
+.glowing-border {
+    position: relative;
+    background: #212121;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    z-index: 1; /* Обеспечивает, что текст останется выше рамки */
+}
+
+.glowing-border::before {
+    content: '';
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    right: -4px;
+    bottom: -4px;
+    background: linear-gradient(45deg, #ff5722, #e91e63, #2196f3, #4caf50);
+    border-radius: 10px; /* Совпадает с родителем */
+    z-index: -1; /* Располагается за основным блоком */
+    animation: glow 3s linear infinite;
+}
+
+@keyframes glow {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* 3. Анимация текста */
+.text-animation {
+    font-size: 24px;
+    background: linear-gradient(90deg, #ff7eb3, #ff758c, #42a5f5);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: textSlide 3s infinite;
+}
+
+@keyframes textSlide {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* 4. Волны */
+.wave {
+    height: 50px;
+    background: linear-gradient(to right, #42a5f5 50%, #1e88e5 50%);
+    background-size: 200% 100%;
+    animation: wave 2s infinite linear;
+}
+
+@keyframes wave {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 200% 0%; }
+}
+
+/* 5. Пружина при наведении */
+.spring-hover {
+    background: #ff9800;
+    transform: scale(1);
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+.spring-hover:hover {
+    transform: scale(1.2);
+}
+
+/* 6. Пульсация */
+.pulse {
+    background: #673ab7;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    border-radius: 50%;
+    animation: pulseEffect 1.5s infinite;
+}
+
+@keyframes pulseEffect {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

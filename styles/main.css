@@ -30,7 +30,8 @@ section {
   margin-bottom: 50px;
   background-color: #F9F9F9;
   position: relative;
-  overflow: hidden;
+  overflow: scroll;
+  scrollbar-width: none;
   animation: fadeInUp 1s ease forwards;
   background: repeating-linear-gradient(45deg, #f7f7f7, #f7f7f7 10px, #e0e0e0 10px, #e0e0e0 20px);
 }
@@ -83,10 +84,31 @@ section {
   font-weight: bold;
 }
 
-.info_item > ul > li {
-  margin-left: 30px;
+.info_item h3::first-letter {
+  color: ligh;
+  font-size: 35px;
 }
 
+
+.info_item > ul > li {
+  list-style-type: none;
+}
+
+ul li:nth-child(odd)::before {
+  content: '+ ';
+  color: #007bff;
+}
+ul li:nth-child(even)::before {
+  content: '- ';
+  color: red;
+  margin-right: 5px;
+}
+ul li:nth-child(odd) {
+  background-color: white;
+}
+ul li:nth-child(even) {
+  background-color: grey;
+}
 
 
 /* ! Секция Описание */
@@ -104,20 +126,6 @@ section {
   padding: 10px 20px;
 }
 
-ul li:nth-child(odd)::before {
-  content: '➡ ';
-  color: #007bff;
-}
-ul li:nth-child(even)::before {
-  content: '✓ ';
-  color: #28a745;
-}
-ul li:nth-child(odd) {
-  background-color: #f8f9fa;
-}
-ul li:nth-child(even) {
-  background-color: #e9ecef;
-}
 
 
 /* ! Секция Галерея */
@@ -232,6 +240,27 @@ input:required {
   border: 2px solid #ff4d4d;
   background: url('data:image/svg+xml;base64,...') no-repeat right;
   padding-right: 25px;
+}
+
+
+button {
+  color: white;
+  background-color: #28a745;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: transform 0.2s, box-shadow 0.3s;
+}
+button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
+}
+button:active {
+  background-color: #218838;
+  transform: scale(0.95);
+}
+button:focus {
+  outline: 2px solid #218838;
 }
 
 
